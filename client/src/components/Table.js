@@ -6,12 +6,12 @@ class Table extends Component {
       <div>
         <table class="table table-hover" style={{ width: 1000, borderColor: 'red', border: 'solid' }}>
           <div class="row">
-            <div class="col" style={{ color: 'white' }}><a href="characters/mario.html">Mario</a></div>
+            <div class="col" style={{ color: 'white' }}><a href="./characters/mario.html">Mario</a></div>
             <div class="col" style={{ color: 'white' }}><a href="characters/donkeykong.html">Donkey Kong</a></div>
             <div class="col" style={{ color: 'white' }}><a href="characters/link.html">Link</a></div>
           </div>
           <div class="row">
-            <div class="col" style={{ color: 'white' }}><a href="characters/kirby.html">Kirby</a></div>
+            <div class="col" style={{ color: 'white' }}><a href="./characters/kirby.html">Kirby</a></div>
             <div class="col" style={{ color: 'white' }}><a href="characters/fox.html">Fox</a></div>
             <div class="col" style={{ color: 'white' }}><a href="characters/pikachu.html">Pikachu</a></div>
           </div>
