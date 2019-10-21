@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body bgcolor=black>
+<body bgcolor=orange>
 <h2 style = "color:white";>Welcome to SmashDB!!!</h2>
 
  <div class="search-container">
@@ -49,5 +49,37 @@
   </tr>
 </table>
 
+<table border="1" align="center">
+    <tr>
+      <td>Reviewer Name</td>
+      <td>Stars</td>
+      <td>Details</td>
+    </tr>
+<?php
+$hostname = "smash-project.cwrpa3uglhdr.us-east-2.rds.amazonaws.com";
+$username = "master";
+$password = "461lsmash!";
+$db = "smash";
+
+$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+
+if ($dbconnect->connect_error) {
+  die("Database connection failed: " . $dbconnect->connect_error);
+
+}
+
+$query = mysqli_query($dbconnect, "SELECT * FROM smash.characterInfo")
+   or die (mysqli_error($dbconnect));
+
+while ($row = mysqli_fetch_array($query)) {
+  echo
+   "<tr>
+    <td>{$row['name']}</td>
+    <td>{$row['full_url']}</td>
+    <td>{$row['main_image_url']}</td>
+   </tr>;
+
+}
+?>
 </body>
 </html>
